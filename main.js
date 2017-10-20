@@ -5,10 +5,18 @@ app.controller('myCtrl', function($scope, $http) {
         "https://i.ytimg.com/vi/1ZYbU82GVz4/maxresdefault.jpg",
         "https://i.ytimg.com/vi/77ZozI0rw7w/maxresdefault.jpg",
         "https://i.ytimg.com/vi/gbU2QQpOa70/maxresdefault.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4zosQAzidViw85jKo0TyZdEt2R4xGoRwP1tHAYf2sHCvpcbC7",
-        "https://www.bensound.com/bensound-img/relaxing.jpg",
-        "http://bsnscb.com/data/out/163/39979532-relaxing-wallpapers.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBg8nISlT4b9RpiNta-uDqTct0kegJA3zxUP6Nv7KEf60850o"
+        "https://wallpapercave.com/wp/VrmXlXD.jpg",
+        "https://i.ytimg.com/vi/xwQ5YpcCDHk/maxresdefault.jpg",
+        "https://delilahhelton.com/wp-content/uploads/2017/06/beach-sunset-pictures-hd-wallpaper-of-beach-hdwallpaper2013-com_.jpg",
+        "http://avante.biz/wp-content/uploads/Ocean-Life-Backgrounds/Ocean-Life-Backgrounds-002.jpg",
+        "http://www.xsjjys.com/data/out/101/WHDQ-512445056.jpg",
+        "http://eskipaper.com/images/awesome-beach-background-1.jpg",
+        "https://i.ytimg.com/vi/KUgrBTNbSe4/maxresdefault.jpg",
+        "http://eskipaper.com/images/california-beach-2.jpg",
+        "http://deskbg.com/s3/wpp/10/10197/relaxing-railay-beach-thailand-desktop-background.jpg",
+
+
+
     ];
 
     $scope.imageIndex = 0;
@@ -29,18 +37,6 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.imageSrc = $scope.images[$scope.imageIndex];
         $scope.backgroundStuff["background"] = ("url(" + $scope.imageSrc + ")");
     }
-
-    $scope.imageArray = [];
-    $scope.searchVideo = function () {
-        var url = "https://pixabay.com/api/?key=6766253-c5676f36b0a8e73817e60de84&q=";
-        url += $scope.image;
-        $http.get(url).then(function (response) {
-            //console.log(response);
-            $scope.imageSrc = response["data"]["hits"][Math.floor(Math.random() * 100 % ((response["data"]["hits"]).length))]["userImageURL"];
-
-        });
-    }
-
 });
 
 

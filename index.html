@@ -3,20 +3,19 @@
 <head>
   <link rel="stylesheet" type="text/css" href="theme.css">
 </head>
-<body>
+<body  ng-app="myApp" ng-controller="myCtrl" >
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-<div ng-app="myApp" ng-controller="myCtrl" ng-init="myCol='lightblue'" class="input">
+<div id="imageDIV" ng-init="myCol='lightblue'" class="input" >
 
-    <button ng-click="searchVideo()" ng-init="" id="search-button">next</button>
-<button ng-click="searchVideo()" ng-init="" id="search-button">prev</button>
+    <img ng-src="{{imageSrc}}"/>
 </div>
-    <div id="search-container">
+<div id="buttonDiv">
 
+    <button ng-click="prevImage()" ng-init="" id="search-button">prev</button>
+    <button ng-click="nextImage()" ng-init="" id="search-button">next</button>
 
-
-    </div>
-
+</div>
 <script>
 
 

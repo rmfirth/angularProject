@@ -9,3 +9,18 @@ body
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+#imageDIV img {
+    width: 1200px;
+    height: 600px;
+}
+
+/*#imageDIV {*/
+    /*width: 500px;*/
+    /*height: 500px;*/
+/*}*/
+
+#buttonDiv {
+    padding: 5px 40%;
+    position: fixed;
+}
